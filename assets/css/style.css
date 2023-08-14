@@ -146,7 +146,7 @@ nav .fly-item{
     z-index: 1;
 }
 
-.primart-button{
+.primary-button{
     background-color: var(--primary-color);
     color: var(--white-color);
     font-size: var(--font-small);
@@ -157,7 +157,7 @@ nav .fly-item{
     transition: var(--trans-background-color);
 }
 
-.primart-button:hover{
+.primary-button:hover{
     background-color: var(--dark-color);
 }
 
@@ -430,7 +430,7 @@ form.search button:hover{
 
 .text-content :where(h2,h3) span:first-child{
     font-weight: var(--fw3);
-    columns: var(--light-text-color);
+    color: var(--light-text-color);
 }
 
 .text-content :where(h2,h3) span:last-child{
@@ -766,6 +766,149 @@ form.search button:hover{
 }
 
 
+/* Banner */
+
+.banners .item{
+    position: relative;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+}
+
+.banner .image{
+    text-align: right;
+}
+
+.banner .get-gray{
+    background-color: var(--border-color);
+}
+
+.banner :where(.text-content, .over-linl){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--percent100);
+    height: var(--percent100);
+}
+
+.banner .text-content{
+    padding: 1.5em 2.5em;
+}
+
+.banner h3{
+    font-size: calc(1em + 0.5vw);
+    font-weight: var(--fw3);
+}
+
+.banner h3 span{
+    font-size: 80%;
+}
+
+.banner .primary-button{
+    z-index: 3;
+}
+
+.banners .product-categories .item{
+    display: flex;
+    padding: 1.5em;
+}
+
+.banners .product-categorie .image{
+    max-width: 150px;
+}
+
+.mini-links ul{
+    font-size: var(--font-small);
+    color: var(--light-text-color);
+    margin-top: 1em;
+}
+
+.banners .second-links{
+    margin-top: 2em;
+}
+
+.mini-links li a:hover{
+    text-decoration: underline;
+}
+
+.product-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* footer */
+
+/* news letter */
+
+.newsletter{
+    padding: 2.5em 0;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.newsletter h3{
+    font-size: 1.5em;
+}
+
+.newsletter p{
+    font-weight: var(--fw3);
+    color: var(--border-color);
+    margin: 0.5em 0 1.5em;
+}
+
+.newsletter p trong{
+    color: var(--primary-color);
+}
+
+.newsletter form{
+    max-width: 500px;
+    width: var(--percent100);
+}
+
+/* widgets */
+
+.widgets{
+    padding: 3.5em 2.5em;
+    background-color: var(--light-bg-color);
+}
+
+/* footer info */
+
+.footer-info{
+    padding: 3.5em 0 5em;
+}
+
+.footer-info .wrapper .flexcol{
+    align-items: center;
+    gap: 0;
+}
+
+.footer-info ul li a{
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-bg-color);
+    border-radius: var(--percent50);
+    margin: 0.25em;
+    transition: var(--trans-background);
+}
+
+.footer-info ul li a:hover{
+    background-color: var(--border-color);
+}
+
+.footer-info .logo a{
+    margin: 0 0 1em -0.75em;
+}
+
+.footer-info .mini-text{
+    margin-top: 2em;
+    text-align: center;
+}
 
 
 
@@ -800,32 +943,9 @@ form.search button:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* mobi*/
+/* reponsive
+    mobi
+*/
 
 
 @media screen and ( min-width: 481px){
@@ -840,6 +960,12 @@ form.search button:hover{
     }
     .products.mini{
         flex: 0 0 50%;
+    }
+    .banner .row{
+        flex: 0 0 47%;
+    }
+    .widgets .row{
+        flex: 0 0 47%;
     }
     .products.main .item{
         flex: 0 0 30.3333%;
@@ -1052,6 +1178,11 @@ form.search button:hover{
     .trending .products{
         flex: 0 0 30.3333%;
     }
+    .product-categories .row{
+        flex: 30.3333%;
+        margin-bottom: 20px;
+       
+    }
 
     .products .big .media{
         max-height: 373px;
@@ -1059,6 +1190,17 @@ form.search button:hover{
 
     .products.main .item{
         flex: 0 0 22%;
+    }
+
+    .widgets .row{
+        flex: 0 0 25%;
+    }
+
+    /* footer */
+    .newsletter .box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
 }
